@@ -7,7 +7,8 @@ import { Appearance, useColorScheme } from 'react-native';
 export default function homeScreen(){
 
     return (
-        <View>aaaaaaa</View>
+        <View>aaaaaabbbbba</View>
+      
     )
 }
 
