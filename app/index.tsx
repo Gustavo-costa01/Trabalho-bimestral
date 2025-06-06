@@ -1,13 +1,15 @@
+import Input from "@/components/Input";
 import React from "react";
-import { TouchableOpacity, View } from "react-native";
-import { Appearance, useColorScheme } from 'react-native';
-
+import { useColorScheme, View } from "react-native";
 
 
 export default function homeScreen(){
 
     return (
-        <View>aaaaaabbbbba</View>
+        <View>aaaaaabbbbba
+        <Input>
+        </Input>
+        </View>
       
     )
 }
