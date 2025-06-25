@@ -1,37 +1,28 @@
-import React, { useState } from "react";
-import { StyleSheet, TextInput, View } from "react-native";
+import React from "react";
+import { StyleSheet, TextInput, TextInputProps } from "react-native";
 
-interface Props{
-    title: string,
-    onPress: () => void; 
+interface Props extends TextInputProps {
+
 }
 
-export default function Input(){
-
-    const [value, onChangeText] = useState('');
-
-    return(
-        <View>
-
-
-
-            <TextInput 
-            style={Styles.Input}
-            placeholder="Digite seu CPF, só pra eu conferir uma coisinha no teu nome"
-            value={value}
-            onChangeText={onChangeText}
-            />
-            
-        </View>
-        
- 
-
-    );
+export default function Input({ style, ...props }: Props) {
+  return (
+    <TextInput 
+      style={[styles.input, style]}
+      {...props}
+    />
+  );
 }
 
-const Styles = StyleSheet.create({
-    Input: {
-        color: 'red',
-    }
+const styles = StyleSheet.create({
+  input: {
+    backgroundColor: "#f8f8f8",
+    padding: 15,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: "#ddd",
+    marginBottom: 15,
+    fontSize: 16,
+    color: "#333",
+  },
 });
-

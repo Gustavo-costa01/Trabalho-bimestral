@@ -1,5 +1,6 @@
+import Input from '@/components/Input';
 import React, { useState } from 'react';
-import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   const [peso, setPeso] = useState('');
@@ -32,16 +33,15 @@ export default function App() {
     <View style={styles.container}>
       <Text style={styles.title}>Calculadora de IMC</Text>
       
-      <TextInput
-        style={styles.input}
+      <Input
         placeholder="Peso (kg)"
         keyboardType="numeric"
         value={peso}
         onChangeText={setPeso}
       />
 
-      <TextInput
-        style={styles.input}
+
+      <Input
         placeholder="Altura (m)"
         keyboardType="numeric"
         value={altura}
