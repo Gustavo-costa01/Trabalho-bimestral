@@ -1,8 +1,10 @@
+import Input from '@/components/Input';
 import * as ImagePicker from 'expo-image-picker';
 import { useState } from 'react';
 import { Alert, Image, Text, TouchableOpacity, View } from 'react-native';
 
 export default function Profile() {
+  const [valor, setValor] = useState('');
   const [image, setImage] = useState<string | null>(null);
 
   const pegarImagem = async () => {
@@ -48,6 +50,13 @@ export default function Profile() {
           
         )}
       </TouchableOpacity>
+
+      <Input
+          placeholder="Exemplo do Input"
+          keyboardType="default"
+          value={valor}
+          onChangeText={setValor}
+      />
     </View>
   );
 }

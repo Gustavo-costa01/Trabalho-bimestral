@@ -1,24 +1,18 @@
-import Input from "@/components/Input";
 import { useRouter } from "expo-router";
-import React, { useState } from "react";
+import React from "react";
 import { Button, Text, View } from "react-native";
 
-export default function homeScreen(){
+export default function about(){
 
-    const [valor, setValor] = useState('');
     const router = useRouter();
 
     return (
         <View>
           <Text>
-            Apenas um Exemplo de como usar o input
+            Apenas um Exemplo de como usar o Sobre
+
           </Text>
-      <Input
-        placeholder="Exemplo do Input"
-        keyboardType="default"
-        value={valor}
-        onChangeText={setValor}
-      />
+
 
 
       <Button title="Ver mais" onPress={() => router.push('/details')} />

@@ -3,7 +3,7 @@ import Input from '@/components/Input';
 import React, { useState } from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 
-export default function CalculadoraIMC() {
+export default function homeScreen() {
   const [peso, setPeso] = useState('');
   const [altura, setAltura] = useState('');
   const [resultado, setResultado] = useState('');
