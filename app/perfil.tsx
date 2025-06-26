@@ -32,8 +32,8 @@ export default function Profile() {
         style={{
           width: 150,
           height: 150,
-          borderRadius: 75,
-          borderWidth: 2,
+          borderRadius: 75, //mexe na circuferencia do selcionar fot
+          borderWidth: 2, //mexe no diametro da borda
           borderColor: '#4a90e@',
           backgroundColor: image ? 'transparent' : '#eee',
           justifyContent: 'center',
@@ -49,7 +49,6 @@ export default function Profile() {
           />
         ) : (
           <Text style={{alignSelf: 'center'}} >Selecionar foto</Text>
-          
         )}
       </TouchableOpacity>
       
