@@ -21,7 +21,7 @@ export default function homeScreen(){
       />
 
 
-      <Button title="Ver mais" onPress={() => router.push('/')} />
+      <Button title="Ver mais" onPress={() => router.push('/details')} />
       </View>
         
 

@@ -2,7 +2,7 @@ import * as ImagePicker from 'expo-image-picker';
 import { useState } from 'react';
 import { Alert, Image, Text, TouchableOpacity, View } from 'react-native';
 
-export default function ImagePickerImproved() {
+export default function Profile() {
   const [image, setImage] = useState<string | null>(null);
 
   const pegarImagem = async () => {
@@ -45,7 +45,6 @@ export default function ImagePickerImproved() {
           />
         ) : (
           <Text style={{alignSelf: 'center'}} >Selecionar foto</Text>
-          
         )}
       </TouchableOpacity>
     </View>
