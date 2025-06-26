@@ -15,6 +15,10 @@ export default function detalhes(){
                 
             </Text>
 
+=======
+            <Button title="Mais informações"  onPress={() => {router.push('/details/info')}}/>
+
+
             <Button title="Ir para o TESTE"  onPress={() => {router.push('/details/info')}}/>         
 
         </View>     
