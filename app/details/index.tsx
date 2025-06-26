@@ -1,10 +1,13 @@
 import React from "react";
-import { View } from "react-native";
+import { Text, View } from "react-native";
 
 export default function detalhes(){
     return(
         <View>
-            APenas um teste maroto, legal
+
+            <Text>
+                    APenas um teste maroto, legal
+            </Text>
         </View>
 
 
