@@ -7,7 +7,8 @@ export default function teste(){
     return(
         <View>
             <Text>
-                Estou na stack TESTES
+                Estou na stack
+                
             </Text>
 
         </View>
