@@ -41,7 +41,8 @@ export default function ImagePickerImproved() {
             style={{ width: '100%', height: '100%' }}
           />
         ) : (
-          <Text>Selecionar foto</Text>
+          <Text style={{alignSelf: 'center'}} >Selecionar foto</Text>
+          
         )}
       </TouchableOpacity>
     </View>
