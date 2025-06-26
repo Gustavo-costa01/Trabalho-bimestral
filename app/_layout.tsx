@@ -5,7 +5,7 @@ import React from "react";
 
 export default function Layout() {
   return(
-    <Tabs screenOptions={{tabBarActiveTintColor: 'dark blue'}}>
+    <Tabs screenOptions={{tabBarActiveTintColor: 'dark blue'}} initialRouteName="index">
       <Tabs.Screen
         name="about"
         options={{
@@ -24,7 +24,8 @@ export default function Layout() {
         name="perfil"
         options={{
           title: "Perfil",
-          tabBarIcon: ({color, size}) => <Ionicons name="person-outline" size={size} color={color}></Ionicons>
+          tabBarIcon: ({color, size}) => 
+          <Ionicons name="person-outline" size={size} color={color}></Ionicons>
         }}
       />
       <Tabs.Screen
