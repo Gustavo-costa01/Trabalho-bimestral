@@ -23,6 +23,10 @@ const styles = StyleSheet.create({
     borderColor: "#ddd",
     marginBottom: 15,
     fontSize: 16,
+    maxWidth: '60%',
     color: "#333",
+    width: 300,
+    justifyContent: 'center',
+    alignSelf: 'center'
   },
 });

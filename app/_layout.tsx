@@ -7,14 +7,14 @@ export default function Layout() {
   return(
     <Tabs screenOptions={{tabBarActiveTintColor: 'dark blue'}}>
       <Tabs.Screen
-        name="index"
+        name="about"
         options={{
-          title: "Inicio",
+          title: "Sobre",
           tabBarIcon: ({color, size}) => <Ionicons name="cafe-outline" size={size} color={color}></Ionicons>
         }}
       />
         <Tabs.Screen
-        name="imc"
+        name="index"
         options={{
           title: "IMC",
           tabBarIcon: ({color, size}) => <Ionicons name="calculator-outline" size={size} color={color}></Ionicons>
