@@ -14,7 +14,7 @@ export default function homeScreen(){
             Apenas um Exemplo de como usar o input
           </Text>
       <Input
-        placeholder="Exemplo do Input"
+        placeholder="teste"
         keyboardType="default"
         value={valor}
         onChangeText={setValor}
