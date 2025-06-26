@@ -29,10 +29,13 @@ export default function Profile() {
           width: 150,
           height: 150,
           borderRadius: 75,
+          borderWidth: 2,
+          borderColor: '#4a90e@',
           backgroundColor: image ? 'transparent' : '#eee',
           justifyContent: 'center',
           alignItems: 'flex-start',
           overflow: 'hidden',
+          
         }}
       >
         {image ? (
@@ -42,6 +45,7 @@ export default function Profile() {
           />
         ) : (
           <Text style={{alignSelf: 'center'}} >Selecionar foto</Text>
+          
         )}
       </TouchableOpacity>
     </View>
