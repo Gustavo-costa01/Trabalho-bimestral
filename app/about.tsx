@@ -3,10 +3,6 @@ import { useRouter } from "expo-router";
 import React, { useState } from "react";
 import { Button, Text, View } from "react-native";
 
-
-
-
-
 export default function homeScreen(){
 
     const [valor, setValor] = useState('');
@@ -25,7 +21,7 @@ export default function homeScreen(){
       />
 
 
-      <Button title="Ver mais" onPress={() => router.push('/about')} />
+      <Button title="Ver mais" onPress={() => router.push('/')} />
       </View>
         
 

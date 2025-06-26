@@ -24,7 +24,7 @@ export default function Layout() {
         name="perfil"
         options={{
           title: "Perfil",
-          tabBarIcon: ({color, size}) => <Ionicons name="settings-outline" size={size} color={color}></Ionicons>
+          tabBarIcon: ({color, size}) => <Ionicons name="person-outline" size={size} color={color}></Ionicons>
         }}
       />
     </Tabs>
