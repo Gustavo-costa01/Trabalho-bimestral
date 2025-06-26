@@ -11,7 +11,7 @@ export default function detalhes(){
                     APenas um teste maroto, legal
                     
             </Text>
-            <Button title="Ir para o TESTE"  onPress={() => {router.push('/details/info/teste')}}/>
+            <Button title="Ir para o TESTE"  onPress={() => {router.push('/details/info')}}/>
 
             <Button title="Voltar" onPress={() => {router.push('/about')}}/>
 
