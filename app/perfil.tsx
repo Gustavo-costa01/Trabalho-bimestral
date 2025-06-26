@@ -1,62 +1,48 @@
-import { useState, useRef } from 'react';
-import { View, Image, Text, TouchableOpacity } from 'react-native';
+import * as ImagePicker from 'expo-image-picker';
+import { useState } from 'react';
+import { Alert, Image, Text, TouchableOpacity, View } from 'react-native';
 
-export default function App() {
-  const [imagePreview, setImagePreview] = useState(null);
-  const fileInputRef = useRef();
+export default function ImagePickerImproved() {
+  const [image, setImage] = useState<string | null>(null);
 
-  const handleClick = () => {
-    fileInputRef.current.click(); 
-  };
+  const pickImage = async () => {
+    // Android precisa disso (iOS ignora silenciosamente)
+    const { granted } = await ImagePicker.requestMediaLibraryPermissionsAsync();
+    if (!granted) return Alert.alert('Permissão negada');
 
-  const handleFileChange = (event) => {
-    const file = event.target.files[0];
-    if (file) {
-      const imageUrl = URL.createObjectURL(file);
-      setImagePreview(imageUrl);
+    const result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ['images'], // Só imagens
+      allowsEditing: true,
+      aspect: [1, 1], // Quadrado
+      quality: 0.8,
+    });
+
+    if (!result.canceled) {
+      setImage(result.assets[0].uri);
     }
   };
 
   return (
-    <View style={{ alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
-     
-      <input
-        type="file"
-        accept="image/*"
-        onChange={handleFileChange}
-        ref={fileInputRef}
-        style={{ display: 'none' }}
-      />
-
-      
-      <TouchableOpacity onPress={handleClick}>
-        {imagePreview ? (
-          <Image
-            source={{ uri: imagePreview }}
-            style={{
-              width: 150,
-              height: 150,
-              borderRadius: 75,
-              borderWidth: 2,
-              borderColor: '#4a90e2',
-              resizeMode: 'cover',
-            }}
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <TouchableOpacity 
+        onPress={pickImage}
+        style={{
+          width: 150,
+          height: 150,
+          borderRadius: 75,
+          backgroundColor: image ? 'transparent' : '#eee',
+          justifyContent: 'center',
+          alignItems: 'center',
+          overflow: 'hidden',
+        }}
+      >
+        {image ? (
+          <Image 
+            source={{ uri: image }} 
+            style={{ width: '100%', height: '100%' }}
           />
         ) : (
-          <View
-            style={{
-              width: 150,
-              height: 150,
-              borderRadius: 75,
-              borderWidth: 2,
-              borderColor: '#ccc',
-              alignItems: 'center',
-              justifyContent: 'center',
-              backgroundColor: '#f0f0f0',
-            }}
-          >
-            <Text style={{ color: '#999' }}>Clique para adicionar</Text>
-          </View>
+          <Text>Selecionar foto</Text>
         )}
       </TouchableOpacity>
     </View>
