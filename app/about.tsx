@@ -7,16 +7,8 @@ export default function about() {
   const router = useRouter();
 
   return (
-    <View>
-      <Text>
-        Apenas um Exemplo de como usar o Sobre
-      </Text>
-      <Input
-        placeholder="teste"
-        keyboardType="default"
-        value={valor}
-        onChangeText={setValor}
-      />
+    <View style={{flex:1, justifyContent: 'center', alignItems: 'center' }}>
+    
 
       <Button title="Ver mais" onPress={() => router.push('/details')} />
     </View>
