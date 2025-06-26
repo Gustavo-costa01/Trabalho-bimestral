@@ -1,11 +1,13 @@
 import Input from '@/components/Input';
 import * as ImagePicker from 'expo-image-picker';
 import { useState } from 'react';
-import { Alert, Image, Text, TouchableOpacity, View } from 'react-native';
+import { Alert, Button, Image, Text, TouchableOpacity, View } from 'react-native';
 
 export default function Profile() {
-  const [valor, setValor] = useState('');
+  const [user, setUser] = useState('');
   const [image, setImage] = useState<string | null>(null);
+  const [nomeUsuario, setNomeUsuario] = useState("Usuário Novo");
+
 
   const pegarImagem = async () => {
     const { granted } = await ImagePicker.requestMediaLibraryPermissionsAsync();
@@ -50,13 +52,21 @@ export default function Profile() {
           
         )}
       </TouchableOpacity>
-
+      
+      <Text>
+        Olá, {nomeUsuario}
+      </Text>
       <Input
-          placeholder="Exemplo do Input"
+          placeholder="Insira seu nome de usuário"
           keyboardType="default"
-          value={valor}
-          onChangeText={setValor}
+          value={user}
+          onChangeText={setUser}
       />
+
+      <Button title="Confirmar" onPress={() => {
+        setNomeUsuario(user);
+      }}/>
+
     </View>
   );
 }
