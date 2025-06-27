@@ -7,10 +7,13 @@ export default function teste(){
     return(
         <View>
             <Text>
-                Este é um projeto feio por estudantes, por gentileza{"\n"}
-                tenha paciencia, com amor: Pedro, Carlos e Gustavo{"\n"}
-                paguenos um café
+                Este é um projeto feito por estudantes,{"\n"}
+                Desenvolvido com intuito didático,{'\n'}
+                Pedro, Carlos e Gustavo{"\n"}
             </Text>
+
+            
+
         </View>
 
 

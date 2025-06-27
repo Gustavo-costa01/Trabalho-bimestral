@@ -8,11 +8,7 @@ export default function about() {
   const router = useRouter();
 
   return (
-
-    <View style={{flex:1, justifyContent: 'center', alignItems: 'center' }}>
-    
-     <View>
-
+            <View>
 
           <Image style={{alignSelf: 'center', height: 400, width: 700, maxHeight: '80%', maxWidth: '90%'}} source={require("@/assets/images/IMC.png")}/>
           <Text style={{textAlign: 'center'}}>
@@ -25,9 +21,7 @@ export default function about() {
       <View style={{width: 500, height: 250, borderRadius: 6, overflow: 'hidden', alignSelf: 'center' }}>
               <Button title="Ver mais" onPress={() => router.push('/details')} />
       </View>
-     </View>
+      </View>
 
   )
 }
-
-

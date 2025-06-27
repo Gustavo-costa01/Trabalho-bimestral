@@ -1,4 +1,4 @@
-import { Stack, useRouter } from "expo-router";
+import { useRouter } from "expo-router";
 import React from "react";
 import { Button, Text, View } from "react-native";
 
@@ -14,13 +14,12 @@ export default function detalhes(){
                  indicando se a pessoa está abaixo do peso, com peso normal, com sobrepeso ou obesa.{"\n"}
                 
             </Text>
+        <View style={{width: 400, height: 150, borderRadius: 6, overflow: 'hidden', alignSelf: 'center' }}>
 
-=======
-            <Button title="Mais informações"  onPress={() => {router.push('/details/info')}}/>
+            <Button title="Voltar"  onPress={() => {router.push('/about')}}/>
 
-
-            <Button title="Ir para o TESTE"  onPress={() => {router.push('/details/info')}}/>         
-
+            <Button title="Sobre nós"  onPress={() => {router.push('/details/info')}}/>         
+        </View>
         </View>     
 
     )
